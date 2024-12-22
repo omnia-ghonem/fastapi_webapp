@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload with FastAPI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>FastAPI File Processing</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 FastAPI Web App</p>
+    </footer>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        // Show loading spinner during form submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const loading = document.getElementById("loading");
+            
+            if (form) {
+                form.addEventListener("submit", function () {
+                    loading.style.display = "flex";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
